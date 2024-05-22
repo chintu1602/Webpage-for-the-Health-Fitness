@@ -1,0 +1,116 @@
+body {
+    color:lightcyan;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+body h2{
+    color:violet;
+}
+
+body h4{
+    color:lightcoral;
+}
+
+body p b{
+    color:darkcyan;
+}
+
+header{
+    width:100%;
+    background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url("head.jpg");
+    background-size: auto;
+    color:white;
+    padding:20px;
+    position:fixed;
+    overflow:hidden;
+    background-position: center;
+    margin-bottom:12%;
+}
+
+header hr{
+    display: block;
+    border-color: #fff;
+    border-width: 2px;
+}
+
+header h1{
+    text-align: center;
+}
+
+header nav a{
+    color:darkturquoise;
+    justify-content: space-around;
+    text-decoration: none;
+    margin-left:130px;
+    margin-right:150px;
+    padding: 10px;
+    font-size: medium;
+}
+
+header nav a:hover{
+    color:white;
+}
+#verti{
+    margin-top:12%;
+    float:left;
+}
+#verti ul{
+    list-style-type: none;
+    margin:0;
+    padding:0;
+    position:fixed;
+    width:15%;
+    height:70%;
+    overflow:auto;
+    border-top:solid 1px;
+    border-right:solid 1px;
+    background-color: darkslategray;
+}
+#verti li a{
+    font-weight: bold;
+    font-size: large;
+    color:goldenrod;
+    display: block;
+    text-decoration:none;
+    padding:20px 20px;
+    text-align:center;
+}
+#verti li a:hover{
+    color:white;
+    background: #333;
+}
+article{
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url("gym.jpg");
+    background-size: 100% 100%;
+    background-position:right;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin-left:15%;
+    padding-top:12%;
+    padding-bottom:5%;
+}
+
+#login{
+    width:25px;
+    height:25px;
+    border-radius: 50%;
+    position: relative;
+}
+
+section {
+    padding: 10px;
+}
+
+footer {
+    background: rgb(43,43,50);
+    background: linear-gradient(90deg, rgba(43,43,50,1) 0%, rgba(47,47,54,1) 58%, rgba(110,121,121,1) 100%);
+    color: darkturquoise;
+    text-align: center;
+    padding: 0%;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

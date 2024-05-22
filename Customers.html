@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>Registrations</title>
+        <style>
+            *{
+                color:white;
+                background-color: darkslategray;
+                text-align:center;
+            }
+            h2{
+                color:hotpink;
+                font-size: 40px;
+            }
+            table{
+                font-size: larger;
+                padding:2px;
+                border-color: white;
+            }
+            table th{
+                color:darkturquoise;
+            }
+        </style>
+    </head>
+    <h2>Registered Customers</h2>
+    <table id="result" border="1px" align="center">
+        <tr>
+            <th>Name</th>
+            <th>User Id</th>
+            <th>Mobile No.</th>
+            <th>Email Id</th>
+        </tr>
+    </table>
+    <script>
+        var name = localStorage.getItem('name');
+        var userid = localStorage.getItem('userid');
+        var mobile = localStorage.getItem('mobile');
+        var email = localStorage.getItem('email');
+        //Alternative is to use session storage
+        var t = document.getElementById('result');
+        function details(){
+            var r = t.insertRow();
+            var c1 = r.insertCell(0);
+            var c2 = r.insertCell(1);
+            var c3 = r.insertCell(2);
+            var c4 = r.insertCell(3);
+            c1.innerHTML = name;
+            c2.innerHTML = userid;
+            c3.innerHTML = mobile;
+            c4.innerHTML = email;
+        }
+        window.onload = details()
+    </script>
+</html>

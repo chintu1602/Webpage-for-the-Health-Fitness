@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>Login and Sign-Up</title>
+        <link rel="stylesheet" href="logstyle.css">
+    </head>
+    <body>
+        <div class="back">
+            <div class="box">
+                <div class="btn-box">
+                    <div id="btn"></div>
+                    <button type="button" class="toggle-btn" onclick="login()">Log In</button>
+                    <button type="button" class="toggle-btn" onclick="sign()">Sign Up</button>
+                </div>
+                <form id="login" class="inp">
+                    <input type="text" class="inp-field" placeholder="User Id" required>
+                    <input type="password" class="inp-field" placeholder="Enter Password" required>
+                    <input type="checkbox" class="check"><span>Remember Password</span>
+                    <button type="submit" class="sub-btn">Log In</button>
+                </form>
+                <form id="sign" class="inp">
+                    <input type="text" class="inp-field" id="name" placeholder="Name" required>
+                    <input type="text" class="inp-field" id="mobile" placeholder="Phone Number" required>
+                    <input type="email" class="inp-field" id="email" placeholder="Email Id" required>
+                    <input type="text" class="inp-field" id="userid" placeholder="User Id" required>
+                    <input type="password" class="inp-field" placeholder="Enter Password" required>
+                    <input type="checkbox" class="check"><span>I agree to the terms and conditions</span>
+                    <button type="submit" class="sub-btn">Sign Up</button>
+                </form>
+            </div>           
+        </div>
+        <script>
+            var x = document.getElementById("login");
+            var y = document.getElementById("sign");
+            var z = document.getElementById("btn");
+            
+            y.addEventListener('submit',function(e){
+                e.preventDefault();
+                var name=document.getElementById("name").value;
+                var userid=document.getElementById("userid").value;
+                var mobile=document.getElementById("mobile").value;
+                var email=document.getElementById("email").value;
+                localStorage.setItem("name", name);
+                localStorage.setItem("userid", userid);
+                localStorage.setItem("mobile", mobile);
+                localStorage.setItem("email", email);
+                window.location.href="Customers.html";
+                //Alternative is to use session storage
+            });
+
+            function sign(){
+                x.style.left = "-400px";
+                y.style.left = "50px";
+                z.style.left = "110px";
+            }
+            function login(){
+                x.style.left = "50px";
+                y.style.left = "450px";
+                z.style.left = "0";
+            }
+        </script>
+    </body>
+</html>
